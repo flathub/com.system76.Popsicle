@@ -30,5 +30,5 @@ modules:
   - install -Dm755 ./target/release/popsicle -t /app/bin/
   - install -Dm755 ./target/release/popsicle-gtk -t /app/bin/
   - install -Dm644 ./gtk/assets/com.system76.Popsicle.appdata.xml -t /app/share/metainfo/
-  - desktop-file-install --set-key=Exec --set-value 'popsicle-gtk %U' ./gtk/assets/com.system76.Popsicle.desktop --dir=/app/share/applications/
+  - desktop-file-install --set-key=Exec --set-value 'popsicle-gtk %f' ./gtk/assets/com.system76.Popsicle.desktop --dir=/app/share/applications/
   - install -Dm644 ./gtk/assets/icons/512x512/apps/com.system76.Popsicle.png -t /app/share/icons/hicolor/512x512/apps/
