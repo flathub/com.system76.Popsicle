@@ -22,6 +22,8 @@ modules:
   - type: archive
     url: https://github.com/pop-os/popsicle/archive/1.2.0.tar.gz
     sha256: b7ea1296dca54b664b700d4a15acb698ed2464f4ca75086d7cf5e9d5ad34133a
+  - type: file
+    path: com.system76.Popsicle.png
   - generated-sources.json
   build-commands:
   - cd cli && cargo build --offline --release
@@ -30,3 +32,4 @@ modules:
   - install -Dm755 ./target/release/popsicle-gtk -t /app/bin/
   - install -Dm644 ./gtk/assets/com.system76.Popsicle.appdata.xml -t /app/share/metainfo/
   - install -Dm644 ./gtk/assets/icons/512x512/apps/com.system76.Popsicle.png -t /app/share/icons/hicolor/512x512/apps/
+  - install -Dm644 com.system76.Popsicle.png -t /app/share/icons/hicolor/128x128/apps/
