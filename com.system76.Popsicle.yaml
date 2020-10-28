@@ -26,6 +26,7 @@ modules:
   build-commands:
   - cd cli && cargo build --offline --release
   - cd gtk && cargo build --offline --release
+  - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|' gtk/assets/com.system76.Popsicle.appdata.xml
   - install -Dm755 ./target/release/popsicle -t /app/bin/
   - install -Dm755 ./target/release/popsicle-gtk -t /app/bin/
   - install -Dm644 ./gtk/assets/com.system76.Popsicle.appdata.xml -t /app/share/metainfo/
