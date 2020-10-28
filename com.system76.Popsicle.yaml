@@ -13,7 +13,6 @@ finish-args:
 - --socket=fallback-x11
 - --socket=wayland
 - --device=all
-- --filesystem=home
 - --system-talk-name=org.freedesktop.UDisks2
 command: popsicle-gtk
 modules:
@@ -21,8 +20,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://github.com/pop-os/popsicle/archive/1.1.0.tar.gz
-    sha256: 0752f73e7fe4a8b9840ea4c4bd8a80eab75ff207f99f7546c5d660d427a2b3f9
+    url: https://github.com/pop-os/popsicle/archive/1.2.0.tar.gz
+    sha256: b7ea1296dca54b664b700d4a15acb698ed2464f4ca75086d7cf5e9d5ad34133a
   - generated-sources.json
   build-commands:
   - cd cli && cargo build --offline --release
@@ -30,5 +29,4 @@ modules:
   - install -Dm755 ./target/release/popsicle -t /app/bin/
   - install -Dm755 ./target/release/popsicle-gtk -t /app/bin/
   - install -Dm644 ./gtk/assets/com.system76.Popsicle.appdata.xml -t /app/share/metainfo/
-  - desktop-file-install --set-key=Exec --set-value 'popsicle-gtk %f' ./gtk/assets/com.system76.Popsicle.desktop --dir=/app/share/applications/
   - install -Dm644 ./gtk/assets/icons/512x512/apps/com.system76.Popsicle.png -t /app/share/icons/hicolor/512x512/apps/
