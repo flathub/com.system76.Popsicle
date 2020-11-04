@@ -24,11 +24,6 @@ modules:
     sha256: b7ea1296dca54b664b700d4a15acb698ed2464f4ca75086d7cf5e9d5ad34133a
   - generated-sources.json
   build-commands:
-  - cd cli && cargo build --offline --release
-  - cd gtk && cargo build --offline --release
   - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|' gtk/assets/com.system76.Popsicle.appdata.xml
-  - install -Dm755 ./target/release/popsicle -t /app/bin/
-  - install -Dm755 ./target/release/popsicle-gtk -t /app/bin/
-  - install -Dm644 ./gtk/assets/com.system76.Popsicle.appdata.xml -t /app/share/metainfo/
-  - install -Dm644 ./gtk/assets/com.system76.Popsicle.desktop -t /app/share/applications/
-  - install -Dm644 ./gtk/assets/icons/512x512/apps/com.system76.Popsicle.png -t /app/share/icons/hicolor/512x512/apps/
+  - make
+  - make install prefix=/app
