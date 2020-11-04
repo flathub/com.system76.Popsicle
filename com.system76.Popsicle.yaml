@@ -15,6 +15,8 @@ finish-args:
 - --device=all
 - --system-talk-name=org.freedesktop.UDisks2
 command: popsicle-gtk
+cleanup:
+- /share/icons/hicolor/512x512@2x
 modules:
 - name: popsicle
   buildsystem: simple
@@ -27,4 +29,3 @@ modules:
   - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|' gtk/assets/com.system76.Popsicle.appdata.xml
   - make
   - make install prefix=/app
-  - rm -r /app/share/icons/hicolor/512x512@2x
