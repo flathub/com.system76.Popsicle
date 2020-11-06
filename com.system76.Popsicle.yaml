@@ -12,7 +12,6 @@ finish-args:
 - --share=ipc
 - --socket=fallback-x11
 - --socket=wayland
-- --device=all
 - --system-talk-name=org.freedesktop.UDisks2
 command: popsicle-gtk
 cleanup:
@@ -22,8 +21,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://github.com/pop-os/popsicle/archive/1.2.0.tar.gz
-    sha256: b7ea1296dca54b664b700d4a15acb698ed2464f4ca75086d7cf5e9d5ad34133a
+    url: https://github.com/pop-os/popsicle/archive/1.3.0.tar.gz
+    sha256: 8759512b22539a3547b0bf4a0ec17f61f59868c5c10ea7025fcf417790f2869d
   - generated-sources.json
   build-commands:
   - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|' gtk/assets/com.system76.Popsicle.appdata.xml
