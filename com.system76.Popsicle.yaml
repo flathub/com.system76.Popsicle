@@ -1,6 +1,6 @@
 app-id: com.system76.Popsicle
 runtime: org.freedesktop.Platform
-runtime-version: '40'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
 - org.freedesktop.Sdk.Extension.rust-stable
