@@ -22,8 +22,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/pop-os/popsicle
+        #  it's maintained on the master branch
         branch: master
-        commit: b9d93328f76923df7b0b06e793001dbd573c11a2
+        commit: cdead03d4fe4e3705b3092e5cbd96ce82f381fb4
       - generated-sources.json
     build-commands:
       - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|'
