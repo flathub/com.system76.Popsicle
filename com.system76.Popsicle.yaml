@@ -24,7 +24,7 @@ modules:
         url: https://github.com/pop-os/popsicle
         #  the upstream maintains the master branch only: https://github.com/pop-os/popsicle/issues/184#issuecomment-1258918391
         branch: master
-        commit: cdead03d4fe4e3705b3092e5cbd96ce82f381fb4
+        commit: 2b8896080c3d958d7e5f0f4366c1e0f1352b25c7
       - generated-sources.json
     build-commands:
       - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|'
