@@ -22,7 +22,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/pop-os/popsicle
-        #  it's maintained on the master branch
+        #  the upstream maintains the master branch only: https://github.com/pop-os/popsicle/issues/184#issuecomment-1258918391
         branch: master
         commit: cdead03d4fe4e3705b3092e5cbd96ce82f381fb4
       - generated-sources.json
