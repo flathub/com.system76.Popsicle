@@ -21,8 +21,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://github.com/pop-os/popsicle/archive/refs/tags/1.3.1.tar.gz
-    sha256: 7cf4f2c2c811bd538b535264719a46625a8a695261aae2b8fd33677076c530fa
+    url: https://github.com/pop-os/popsicle/archive/refs/tags/1.3.3.tar.gz
+    sha256: 5c7fb30181a3e1783af63a5b1f03d96bec8e8306fea272235672b9be4d1648cb
   - generated-sources.json
   build-commands:
   - sed -i 's|</launchable>|</launchable>\n<icon type="remote" height="512" width="512">https://raw.githubusercontent.com/pop-os/popsicle/master/gtk/assets/icons/512x512/apps/com.system76.Popsicle.png</icon>|' gtk/assets/com.system76.Popsicle.appdata.xml
