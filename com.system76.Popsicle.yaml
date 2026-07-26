@@ -1,11 +1,13 @@
 app-id: com.system76.Popsicle
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
 - org.freedesktop.Sdk.Extension.rust-stable
+- org.freedesktop.Sdk.Extension.llvm20
 build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin
+  append-path: "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin"
+  prepend-ld-library-path: "/usr/lib/sdk/llvm20/lib"
   env:
     CARGO_HOME: /run/build/popsicle/cargo
 finish-args:
